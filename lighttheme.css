@@ -1,0 +1,894 @@
+/* ================= LIGHT THEME OVERRIDES ================= */
+body.light-theme {
+  --bg-color: #f7faff;
+  --second-bg-color: #e6ecf3;
+  --text-color: #1a233a;
+  --main-color: #0077cc;
+  --accent-color: #00bfff;
+  --border-color: #b2d0ee;
+  --input-bg: #fff;
+  --input-border: #b2d0ee;
+  --input-text: #1a233a;
+  --shadow-color: rgba(0, 119, 204, 0.08);
+}
+
+/* General */
+body.light-theme,
+body.light-theme body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Header & Navbar */
+body.light-theme .header {
+  background: #e6ecf3;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+body.light-theme .logo {
+  color: var(--main-color);
+}
+
+body.light-theme .navbar a {
+  color: var(--text-color);
+}
+
+body.light-theme .navbar a:hover,
+body.light-theme .navbar a.active {
+  color: var(--main-color);
+}
+
+/* Home Section */
+body.light-theme .home {
+  background: url("light_bg.avif") no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color);
+}
+
+body.light-theme .home_content h1,
+body.light-theme .home_content h3,
+body.light-theme .home_content p {
+  color: var(--text-color);
+}
+
+body.light-theme .home_content h3 span {
+  color: var(--main-color);
+}
+
+body.light-theme .home_sci a {
+  border-color: var(--main-color);
+  color: var(--main-color);
+  background: transparent;
+}
+
+body.light-theme .home_sci a:hover {
+  background: var(--main-color);
+  color: #fff;
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+body.light-theme .btn-box {
+  background: var(--main-color);
+  color: #fff;
+  box-shadow: 0 0 8px var(--main-color), 0 0 20px var(--main-color);
+}
+
+body.light-theme .btn-box:hover {
+  box-shadow: 0 0 10px var(--main-color), 0 0 30px var(--main-color), 0 0 60px var(--main-color);
+  color: var(--main-color);
+  background: #fff;
+}
+
+/* About Section */
+body.light-theme .about {
+  background: var(--second-bg-color);
+}
+
+body.light-theme .about .about-img {
+  border: 7px solid var(--main-color);
+  box-shadow: 0 0 20px var(--main-color), 0 0 40px rgba(0, 119, 204, 0.15);
+}
+
+body.light-theme .about-text h2,
+body.light-theme .about-text h4 {
+  color: var(--main-color);
+}
+
+body.light-theme .about-text h2 span {
+  color: var(--accent-color);
+}
+
+body.light-theme .about-text p {
+  color: #3b4a5a;
+}
+
+/* Section Titles */
+body.light-theme .sub-title,
+body.light-theme .skills,
+body.light-theme .projects-main-heading,
+body.light-theme .about-text h2,
+body.light-theme .section-title {
+  color: var(--main-color);
+}
+
+body.light-theme .sub-title span,
+body.light-theme .skills span,
+body.light-theme .projects-main-heading span,
+body.light-theme .section-title span {
+  color: var(--accent-color);
+}
+
+body.light-theme .sub-title::after,
+body.light-theme .skills::after,
+body.light-theme .projects-main-heading::after,
+body.light-theme .section-title::after {
+  background: var(--main-color);
+}
+
+/* Education Section */
+body.light-theme #education {
+  background: var(--bg-color);
+}
+
+body.light-theme .education div {
+  background: var(--second-bg-color);
+  box-shadow: 1px 1px 20px var(--main-color), 1px 1px 40px #b2d0ee;
+  border-left-color: var(--main-color);
+}
+
+body.light-theme .education div h2,
+body.light-theme .education div h3 {
+  color: var(--main-color);
+}
+
+body.light-theme .education div p,
+body.light-theme .education div h4 {
+  color: #3b4a5a;
+}
+
+/* Skills Section */
+body.light-theme #skill {
+  background: var(--bg-color);
+}
+
+body.light-theme .container1 {
+  background: transparent;
+  color: var(--text-color);
+}
+
+body.light-theme .heading1 {
+  color: var(--main-color);
+}
+
+body.light-theme .bar i,
+body.light-theme .bar img {
+  color: var(--main-color);
+}
+
+body.light-theme .progress-line {
+  background-color: #cbe5ff;
+}
+
+body.light-theme .progress-line span {
+  background-color: var(--main-color);
+}
+
+body.light-theme .progress-line::after {
+  color: var(--main-color);
+}
+
+body.light-theme .bar span {
+  color: black;
+}
+
+/* Professional Skills Radial Bars */
+body.light-theme .radial-bars .progress-bar {
+  stroke: #cbe5ff;
+}
+
+body.light-theme .radial-bars .path {
+  stroke: var(--main-color);
+}
+
+body.light-theme .radial-bars .percentage {
+  color: var(--main-color);
+}
+
+body.light-theme .radial-bars .text {
+  color: var(--text-color);
+}
+
+/* List Containers (Languages, Hobbies) */
+body.light-theme .list-container p {
+  background-color: rgba(0, 119, 204, 0.06);
+  border: 1px solid var(--main-color);
+  color: var(--text-color);
+  background-image: none;
+  -webkit-text-fill-color: unset;
+}
+
+body.light-theme .list-container p:hover {
+  background-color: rgba(0, 119, 204, 0.11);
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 15px rgba(0, 119, 204, 0.13);
+}
+
+body.light-theme .list-container p::before {
+  color: var(--main-color);
+  text-shadow: 0 0 8px var(--main-color);
+}
+
+body.light-theme .list-container p:hover::before {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Projects Section */
+body.light-theme .portfolio-projects {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.light-theme .project-card {
+  background-color: var(--second-bg-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 1px 1px 20px var(--main-color), 1px 1px 40px #b2d0ee;
+}
+
+body.light-theme .project-card h3 {
+  color: var(--main-color);
+}
+
+body.light-theme .project-tech {
+  color: var(--accent-color);
+}
+
+body.light-theme .project-description {
+  color: #3b4a5a;
+}
+
+body.light-theme .action-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
+}
+
+body.light-theme .action-btn:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  box-shadow: 0 0 12px var(--main-color), 0 0 22px rgba(0, 119, 204, 0.2);
+}
+
+body.light-theme .action-btn.github-btn {
+  background-color: #e6ecf3;
+  border-color: #333;
+  color: #333;
+}
+
+body.light-theme .action-btn.github-btn:hover {
+  background-color: #cbe5ff;
+  border-color: #0077cc;
+  color: #0077cc;
+}
+
+body.light-theme .action-btn.download-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+body.light-theme .action-btn.download-btn:hover {
+  background-color: #d4f5e9;
+  border-color: #218838;
+  color: #218838;
+}
+
+/* Experience Section */
+body.light-theme #experience {
+  background: var(--bg-color);
+}
+
+body.light-theme .experience-item {
+  background-color: var(--second-bg-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 1px 1px 20px var(--main-color), 1px 1px 40px #b2d0ee;
+}
+
+body.light-theme .experience-header h3,
+body.light-theme .experience-header .company-name {
+  color: var(--main-color);
+}
+
+body.light-theme .experience-header .job-type {
+  background-color: rgba(0, 119, 204, 0.08);
+  color: var(--main-color);
+}
+
+body.light-theme .experience-header p {
+  color: #3b4a5a;
+}
+
+body.light-theme .skills-used {
+  color: var(--text-color);
+  border-top: 1px dashed #b2d0ee;
+}
+
+body.light-theme .skills-used span {
+  color: var(--accent-color);
+}
+
+/* Certificates Section */
+body.light-theme .certificates-section {
+  background: var(--bg-color);
+}
+
+body.light-theme .certificate-item {
+  background-color: var(--second-bg-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 1px 1px 20px var(--main-color), 1px 1px 40px #b2d0ee;
+}
+
+body.light-theme .certificate-org-logo {
+  background-color: #fff;
+  box-shadow: 0 2px 8px #b2d0ee;
+}
+
+body.light-theme .info-text h3 {
+  color: var(--main-color);
+}
+
+body.light-theme .info-text p {
+  color: #3b4a5a;
+}
+
+body.light-theme .info-text .skills-cert span {
+  color: var(--main-color);
+}
+
+body.light-theme .certificate-actions .credential-button {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+body.light-theme .certificate-actions .credential-button:hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+body.light-theme .certificate-actions .certificate-preview.folded-paper {
+  background-color: #e6ecf3;
+  border: 1px solid #b2d0ee;
+}
+
+body.light-theme .certificate-actions .certificate-preview.folded-paper:hover {
+  background-color: #cbe5ff;
+  box-shadow: 0 4px 12px var(--main-color);
+}
+
+body.light-theme .certificate-actions .certificate-preview.folded-paper i {
+  color: var(--main-color);
+}
+
+body.light-theme .certificate-actions .certificate-preview.folded-paper:hover i {
+  color: #fff;
+}
+
+body.light-theme .certificate-image-overlay {
+  background-color: rgba(245, 247, 250, 0.97);
+}
+
+body.light-theme .certificate-image-overlay img {
+  border: 4px solid var(--main-color);
+}
+
+body.light-theme .certificate-image-overlay .certificate-description,
+body.light-theme .certificate-image-overlay .no-certificate-note {
+  color: var(--main-color);
+}
+
+body.light-theme .close-overlay {
+  color: var(--main-color);
+}
+
+body.light-theme .close-overlay:hover {
+  color: var(--accent-color);
+}
+
+/* Contact Section */
+body.light-theme .contact {
+  background: var(--bg-color);
+}
+
+body.light-theme .contact .heading,
+body.light-theme .contact .heading span {
+  color: var(--main-color);
+}
+
+body.light-theme .contact-intro {
+  color: var(--text-color);
+}
+
+body.light-theme .contact-info,
+body.light-theme .contact-form {
+  background: var(--second-bg-color);
+  border: 2px solid var(--main-color);
+  color: var(--text-color);
+}
+
+body.light-theme .contact-info h3,
+body.light-theme .contact-form h3 {
+  color: var(--main-color);
+}
+
+body.light-theme .contact-info .info-item i {
+  color: var(--main-color);
+}
+
+body.light-theme .contact-info .info-item a {
+  color: var(--text-color);
+}
+
+body.light-theme .contact-info .info-item a:hover {
+  color: var(--main-color);
+}
+
+body.light-theme .contact-form .input-box input,
+body.light-theme .contact-form textarea {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+}
+
+body.light-theme .contact-form .input-box input::placeholder,
+body.light-theme .contact-form textarea::placeholder {
+  color: #888;
+}
+
+body.light-theme .contact-form .input-box input:focus,
+body.light-theme .contact-form textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 10px rgba(0, 119, 204, 0.22);
+}
+
+body.light-theme .contact-form .btn-box {
+  background: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
+}
+
+body.light-theme .contact-form .btn-box:hover {
+  background: #fff;
+  color: var(--main-color);
+  box-shadow: 0 0 15px rgba(0, 119, 204, 0.19);
+}
+
+/* Footer */
+body.light-theme .footer {
+  background: var(--second-bg-color);
+  color: var(--text-color);
+}
+
+/* ================= ADMIN MODAL LIGHT THEME ================= */
+body.light-theme .admin-modal {
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(2px);
+  display: none;
+  position: fixed;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+body.light-theme .admin-modal.active {
+  display: flex;
+}
+
+body.light-theme .admin-modal-content {
+  background: linear-gradient(135deg, #f8fbff 70%, #e3f0ff 100%);
+  color: #1a233a;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(0, 119, 204, 0.18), 0 2px 8px #b2d0ee;
+  border: 2.5px solid #b2d0ee;
+  padding: 2.5rem 2rem 2rem 2rem;
+  position: relative;
+  width: 95%;
+  max-width: 420px;
+  z-index: 20001;
+  pointer-events: auto;
+}
+
+body.light-theme .admin-modal-close {
+  color: #0077cc;
+  font-size: 2.3rem;
+  top: 10px;
+  right: 20px;
+  opacity: 0.7;
+  transition: color 0.2s, opacity 0.2s, transform 0.2s;
+  position: absolute;
+  cursor: pointer;
+  z-index: 20002;
+}
+
+body.light-theme .admin-modal-close:hover {
+  color: #ff3b3b;
+  opacity: 1;
+  transform: scale(1.2) rotate(90deg);
+}
+
+body.light-theme #adminLoginSection,
+body.light-theme #responsesSection {
+  background: #f5faff;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 12px #b2d0ee33;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1.5px solid #b2d0ee;
+}
+
+body.light-theme #adminLoginSection h3,
+body.light-theme #responsesSection h3 {
+  color: #0077cc;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+body.light-theme #adminLoginSection input[type="password"] {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  font-size: 1.05rem;
+  border-radius: 7px;
+  border: 1.5px solid #b2d0ee;
+  background: #fff;
+  color: #181a1b;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+body.light-theme #adminLoginSection input[type="password"]:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 8px #b2d0ee55;
+}
+
+body.light-theme #adminLoginSection button,
+body.light-theme #adminLogoutBtn {
+  background: linear-gradient(90deg, #0077cc 60%, #00bfff 100%);
+  color: #fff;
+  border: #00abf0;
+  border-radius: 7px;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  box-shadow: 0 2px 6px #b2d0ee44;
+  transition: background 0.2s, transform 0.2s;
+}
+
+body.light-theme #adminLoginSection button:hover,
+body.light-theme #adminLogoutBtn:hover {
+  background: linear-gradient(90deg, #00bfff 40%, #0077cc 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+body.light-theme #responsesList {
+  margin-top: 1.2rem;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+body.light-theme #responsesList .response {
+  background: linear-gradient(90deg, #e3f0ff 80%, #f8fbff 100%);
+  border-radius: 8px;
+  margin-bottom: 1.1rem;
+  padding: 0.8rem 1.1rem;
+  font-size: 1.01rem;
+  border-left: 4px solid #00bfff;
+  box-shadow: 0 1px 8px #b2d0ee22;
+  transition: box-shadow 0.2s;
+}
+
+body.light-theme #responsesList .response strong {
+  color: #0077cc;
+  font-weight: 700;
+}
+
+body.light-theme #responsesList .response em {
+  color: #00bfff;
+  font-size: 0.98em;
+  font-style: normal;
+}
+
+body.light-theme #responsesList .response p {
+  margin: 0.5em 0 0.1em 0;
+  color: #222;
+  font-size: 1.02em;
+}
+
+body.light-theme #responsesList .response:hover {
+  box-shadow: 0 4px 18px #00bfff33;
+}
+
+body.light-theme #openAdminModal {
+  background: linear-gradient(135deg, #f8fbff 70%, #e3f0ff 100%);
+  color: #0077cc;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.7rem;
+  box-shadow: 0 2px 8px var(--main-color, #00abf033);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  z-index: 20010;
+  pointer-events: auto;
+}
+
+body.light-theme #openAdminModal:hover {
+  background: linear-gradient(135deg, #e3f0ff 70%, #b2d0ee 100%);
+  color: #00bfff;
+  box-shadow: 0 4px 18px #00bfff33;
+}
+
+/* Responsive for modal */
+@media (max-width: 600px) {
+  body.light-theme .admin-modal-content {
+    padding: 1.2rem 0.6rem 1rem 0.6rem;
+    max-width: 96vw;
+  }
+
+  body.light-theme #adminLoginSection,
+  body.light-theme #responsesSection {
+    padding: 1rem;
+  }
+}
+
+/* ================= DARK THEME OVERRIDES ================= */
+body:not(.light-theme) {
+  --bg-color: #001b29;
+  --second-bg-color: #051129;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+  --accent-color: #0ef;
+  --border-color: #003366;
+  --input-bg: #0a1c33;
+  --input-border: #00abf0;
+  --input-text: #ededed;
+  --shadow-color: rgba(0, 171, 240, 0.15);
+}
+
+/* === MODERN DARK ADMIN MODAL === */
+body:not(.light-theme) .admin-modal {
+  background: #001b29;
+  backdrop-filter: blur(2.5px);
+  display: none;
+  position: fixed;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+body:not(.light-theme) .admin-modal.active {
+  display: flex;
+}
+
+body:not(.light-theme) .admin-modal-content {
+  background: #001b29;
+  color: #ededed;
+  border-radius: 18px;
+  box-shadow: 0 0 24px 0 #00bfff33, 0 4px 40px #001b29cc;
+  border: 1.5px solid #00bfff;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  position: relative;
+  width: 95%;
+  max-width: 400px;
+  z-index: 20001;
+  pointer-events: auto;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+body:not(.light-theme) .admin-modal-content:hover {
+  box-shadow: 0 0 36px 6px #00bfff22, 0 4px 50px #001b29cc;
+  border-color: #00bfff;
+}
+
+body:not(.light-theme) .admin-modal-close {
+  color: #00bfff;
+  font-size: 2.1rem;
+  top: 10px;
+  right: 20px;
+  opacity: 0.8;
+  transition: color 0.2s, opacity 0.2s, transform 0.2s;
+  position: absolute;
+  cursor: pointer;
+  z-index: 20002;
+}
+
+body:not(.light-theme) .admin-modal-close:hover {
+  color: #fff;
+  opacity: 1;
+  transform: scale(1.15) rotate(90deg);
+}
+
+body:not(.light-theme) #adminLoginSection,
+body:not(.light-theme) #responsesSection {
+  background: #001b29;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #00bfff18;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  border: 1px solid #00bfff33;
+}
+
+body:not(.light-theme) #adminLoginSection h3,
+body:not(.light-theme) #responsesSection h3 {
+  color: #00bfff;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+body:not(.light-theme) #adminLoginSection input[type="password"] {
+  width: 90%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: 1.5px solid #00bfff;
+  background: #fff;
+  color: black;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+body:not(.light-theme) #adminLoginSection input[type="password"]:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 8px #00bfff33;
+}
+
+body:not(.light-theme) #adminLoginSection button,
+body:not(.light-theme) #adminLogoutBtn {
+  background: #00bfff;
+  color: #001b29;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  box-shadow: 0 2px 6px #00bfff22;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+body:not(.light-theme) #adminLoginSection button:hover,
+body:not(.light-theme) #adminLogoutBtn:hover {
+  background: #001b29;
+  color: #00bfff;
+  border: 1.5px solid #00bfff;
+  transform: translateY(-2px) scale(1.03);
+}
+
+body:not(.light-theme) #responsesList {
+  margin-top: 1.2rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+body:not(.light-theme) #responsesList .response {
+  background: #001b29;
+  border-radius: 8px;
+  margin-bottom: 1.1rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.98rem;
+  border-left: 3px solid #00bfff;
+  box-shadow: 0 1px 8px #00bfff18;
+  transition: box-shadow 0.2s;
+}
+
+body:not(.light-theme) #responsesList .response strong {
+  color: #00bfff;
+  font-weight: 700;
+}
+
+body:not(.light-theme) #responsesList .response em {
+  color: #00bfff;
+  font-size: 0.98em;
+  font-style: normal;
+}
+
+body:not(.light-theme) #responsesList .response p {
+  margin: 0.5em 0 0.1em 0;
+  color: #ededed;
+  font-size: 1.02em;
+}
+
+body:not(.light-theme) #responsesList .response:hover {
+  box-shadow: 0 4px 18px #00bfff22;
+}
+
+/* Toggle Button for Dark Theme */
+body:not(.light-theme) #openAdminModal,
+body:not(.light-theme) #themeToggleBtn {
+  background: #07182d;
+  color: #00bfff;
+  border: 2px solid #00bfff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.7rem;
+  box-shadow: 0 2px 8px #00bfff22;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  z-index: 20010;
+  pointer-events: auto;
+}
+
+body:not(.light-theme) #openAdminModal:hover,
+body:not(.light-theme) #themeToggleBtn:hover {
+  background: #001b29;
+  color: #fff;
+  box-shadow: 0 4px 18px #00bfff22;
+}
+
+/* Responsive for modal */
+@media (max-width: 600px) {
+  body:not(.light-theme) .admin-modal-content {
+    padding: 1rem 0.3rem 1rem 0.3rem;
+    max-width: 96vw;
+  }
+
+  body:not(.light-theme) #adminLoginSection,
+  body:not(.light-theme) #responsesSection {
+    padding: 1rem;
+  }
+}
+
+/* Toggle Button (Light & Dark Theme) */
+#openAdminModal,
+#themeToggleBtn {
+  background: linear-gradient(135deg, #051129 70%, #003366 100%);
+  color: #00abf0;
+  border: 2px solid #003366;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.7rem;
+  box-shadow: 0 2px 8px #00abf044;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  z-index: 20010;
+  pointer-events: auto;
+}
+
+#openAdminModal:hover,
+#themeToggleBtn:hover {
+  background: linear-gradient(135deg, #003366 70%, #0a1c33 100%);
+  color: #0ef;
+  box-shadow: 0 4px 18px #00abf033;
+}
+
+/* Responsive for modal */
+@media (max-width: 600px) {
+  body:not(.light-theme) .admin-modal-content {
+    padding: 1.2rem 0.6rem 1rem 0.6rem;
+    max-width: 96vw;
+  }
+
+  body:not(.light-theme) #adminLoginSection,
+  body:not(.light-theme) #responsesSection {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,2808 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #ededed;
+    background: #001b29;
+    line-height: 1.6;
+    /* Added a base line-height for better readability */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for header */
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+    /* Bolder logo */
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    /* Adjusted from 23px for better fit */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    /* Consistent spacing */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Added transform transition */
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--1));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+    transform: translateY(-2px);
+    /* Slight lift on hover/active */
+}
+
+/* --- Section Default Styling --- */
+section {
+    min-height: 90vh;
+    padding: 120px 10% 70px;
+    /* Top padding for fixed header, bottom padding */
+    box-sizing: border-box;
+    width: 100%;
+    /* Your existing global section style had this */
+}
+
+/* Your global section style - review if it conflicts with specific section layouts */
+/* section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px; // This padding is less than the one above, choose one
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 80vh;
+} */
+
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 100vh;
+    /* Ensure it takes full viewport */
+    background: url("dark_blue.avif") no-repeat;
+    /* Make sure this image exists */
+    background-blend-mode: lighten;
+    /* Consider other blend modes or none */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    /* Specific padding for home, top matches header height */
+    color: #ededed;
+    /* Ensure text color is set if not inheriting properly */
+}
+
+.home_content {
+    max-width: 600px;
+    z-index: 10;
+}
+
+.home_content h1 {
+    font-size: 52px;
+    /* Slightly larger */
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    /* Adjusted margin */
+    opacity: 0;
+    animation: slideRight 1s 0.7s ease forwards;
+    /* Adjusted delay */
+}
+
+.home_content h3 {
+    font-size: 30px;
+    /* Adjusted */
+    font-weight: 700;
+    opacity: 0;
+}
+
+.home_content h3:nth-of-type(1) {
+    /* "Hello, It's Me" */
+    animation: slideBottom 1s 0.5s ease forwards;
+    margin-bottom: 5px;
+}
+
+.home_content h3:nth-of-type(2) {
+    /* "And I'm a..." */
+    animation: slideTop 1s 1.2s ease forwards;
+    /* Adjusted delay */
+    margin-bottom: 25px;
+    /* Adjusted margin */
+}
+
+
+.home_content h3 span {
+    color: #0ef;
+}
+
+.home_content p {
+    font-size: 17px;
+    /* Adjusted for readability */
+    line-height: 1.7;
+    padding: 0;
+    /* Removed top padding if margin is used */
+    margin-bottom: 30px;
+    /* Added margin for spacing */
+    text-align: left;
+    /* Changed from justify for a cleaner look sometimes */
+    opacity: 0;
+    animation: slideLeft 1s 1.5s ease forwards;
+    /* Adjusted delay */
+}
+
+.home_sci {
+    margin: 0 0 35px;
+    /* Adjusted margin */
+}
+
+.home_sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    /* Slightly larger */
+    height: 42px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    animation: slideLeft 0.3s ease forwards;
+    /* Smoother animation */
+    animation-delay: calc(0.10s * var(--1) + 1.4s);
+    /* Staggered delay */
+}
+
+.home_sci a:hover {
+    background: #0ef;
+    color: #001b29;
+    box-shadow: 0 0 25px #0ef;
+    transform: scale(1.1) translateY(-2px);
+    /* More interactive hover */
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 30px;
+    /* Adjusted padding */
+    background: #0ef;
+    border-radius: 30px;
+    /* Slightly less rounded */
+    font-size: 16px;
+    color: #001b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s 2.2s ease forwards;
+    /* Adjusted delay */
+    box-shadow: 0 0 8px #0ef, 0 0 20px #0ef;
+    /* Adjusted shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 10px cyan,
+        0 0 30px cyan, 0 0 60px cyan;
+    transform: translateY(-3px);
+    /* Lift effect */
+}
+
+.home .about-img {
+    /* Image in Home section */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 7px solid #0ef;
+    box-shadow: 0 0 20px #0ef, 0 0 40px rgba(0, 239, 255, 0.5);
+    /* Enhanced shadow */
+    opacity: 0;
+    animation: zoomIn 1.2s 0.8s ease forwards;
+    /* Smoother zoom */
+    margin-left: auto;
+    margin-right: 3%;
+    /* Adjusted margin */
+}
+
+.home .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 2.5rem;
+    /* Adjusted gap */
+}
+
+.about .about-img {
+    /* Image in About section */
+    width: 280px;
+    /* Adjusted size */
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 7px solid #0ef;
+    margin: 0 auto;
+    box-shadow: 0 0 20px #0ef, 0 0 40px rgba(0, 239, 255, 0.5);
+    opacity: 0;
+    animation: zoomIn 1.2s 0.5s ease forwards;
+}
+
+.about .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    opacity: 0;
+    animation: slideRight 1s 0.8s ease forwards;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    /* Consistent with other titles */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #e0e0e0;
+    /* Slightly softer white */
+    line-height: 1.6;
+    margin: 10px 0 20px;
+}
+
+.about-text p {
+    color: #b0c4de;
+    /* Lighter steel blue for paragraph */
+    font-size: 16px;
+    /* Adjusted */
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+#education .educations-container {
+    /* Renamed class */
+    color: aliceblue;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    /* More space after title */
+    color: #ededed;
+    position: relative;
+    opacity: 0;
+    animation: slideBottom 1s 0.2s ease forwards;
+}
+
+.sub-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    /* Adjusted position */
+    transform: translateX(-50%);
+    width: 80px;
+    /* Adjusted width */
+    height: 4px;
+    background: #00bfff;
+    border-radius: 2px;
+}
+
+.sub-title span {
+    color: #00bfff;
+}
+
+#education .container {
+    padding: 0;
+}
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive columns */
+    gap: 25px;
+}
+
+.education div {
+    background-color: transparent;
+    padding: 30px 25px;
+    /* Adjusted padding */
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 1px 1px 20px #00bfff,
+        1px 1px 40px #0053b8f7;
+    opacity: 0;
+    animation: slideUp 0.7s ease forwards;
+    /* Changed from slideTop for clarity */
+    border-left: 4px solid transparent;
+    /* For hover effect */
+}
+
+.education div:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 7px 25px rgba(0, 239, 255, 0.18);
+    border-left-color: #00bfff;
+    /* Accent border on hover */
+}
+
+.education div:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.education div:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.education div:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.education i {
+    font-size: 40px;
+    /* Adjusted */
+    margin-bottom: 15px;
+    color: #00bfff;
+    /* Directly style here, remove inline style from HTML */
+    display: block;
+    /* Ensures margin bottom works correctly */
+}
+
+.education div h2 {
+    font-size: 20px;
+    /* Adjusted */
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ededed;
+}
+
+.education div p {
+    /* For degree name */
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: #b0c4de;
+    font-style: normal;
+    /* Removed italic */
+}
+
+.education div h3 {
+    /* For year */
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #00bfff;
+}
+
+.education div h4 {
+    /* For percentage */
+    font-size: 14px;
+    font-weight: 500;
+    color: #b0c4de;
+    font-style: italic;
+}
+
+#skill {
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.skills {
+    /* Title "My Skills" */
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    color: #ededed;
+    position: relative;
+    opacity: 0;
+    animation: slideBottom 1s 0.2s ease forwards;
+}
+
+.skills::after {
+    /* Underline effect */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #00bfff;
+    border-radius: 2px;
+}
+
+.skills span {
+    color: #00bfff;
+}
+
+.skills-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    /* Consistent gap */
+    padding: 0 2%;
+    width: 100%;
+    max-width: 1100px;
+    /* Adjusted max-width */
+    align-items: flex-start;
+}
+
+.container1 {
+    width: 48%;
+    max-width: 580px;
+    min-width: 400px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* --- Headings within containers (e.g., "Technical Skills", "Professional Skills", "Languages", "Hobbies") --- */
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 40px;
+    color: white;
+    width: 100%;
+    font-size: 2em;
+}
+
+.container1 .heading1:nth-of-type(2) {
+    margin-top: 50px;
+}
+
+.container1 .heading1:nth-of-type(3) {
+    margin-top: 50px;
+}
+
+/* --- Technical Skills Bar Styles --- */
+.Technical-bars {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 89px;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+}
+
+.bar i {
+    font-size: 2.2em;
+    margin-right: 15px;
+    color: #0ef;
+}
+
+.bar img {
+    width: 2.2em;
+    height: 2.2em;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.info span:first-child {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.info span:first-child.animate {
+    opacity: 1;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+.bar-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: calc(100% - 60px);
+    height: 10px;
+    background-color: #333;
+    overflow: visible;
+    transform-origin: left;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+@keyframes animateProgressLine {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+/* Specific widths for each technical skill's progress bar (span inside progress-line) */
+.progress-line.html span {
+    width: 85%;
+}
+
+.progress-line.css span {
+    width: 70%;
+}
+
+.progress-line.js span {
+    width: 60%;
+}
+
+.progress-line.py span {
+    width: 70%;
+}
+
+.progress-line.java span {
+    width: 90%;
+}
+
+.progress-line.kt span {
+    width: 75%;
+}
+
+.progress-line.c span {
+    width: 85%;
+}
+
+.progress-line.sql span {
+    width: 50%;
+}
+
+.progress-line::after {
+    content: attr(data-percent);
+    position: absolute;
+    left: 100%;
+    padding: 1px 5px;
+    color: #0ef;
+    /* CORRECTED: Cyan color for the percentage text */
+    font-size: 12px;
+    border-radius: 3px;
+    top: 50%;
+    transform: translateY(-50%) translateX(5px);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.progress-line.animate::after {
+    opacity: 1;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+
+.progress-line span.animate {
+    transform: scaleX(1);
+    animation: fillProgress 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+duplicate percentages or triangles */ .progress-line span::after,
+.progress-line span::before {
+    content: none;
+}
+
+.progress-line.animate {
+    transform: scaleX(1);
+    animation: animateProgressLine 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+/* --- Professional Skills Radial Bar Styles --- */
+.radial-bars-container {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* NEW: Two equal columns */
+    gap: 40px;
+    /* Adjust gap between grid items (increase slightly for breathing room) */
+    justify-items: center;
+    /* Center items within their grid cells */
+
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.radial-bars {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    box-sizing: border-box;
+    /* width: 100px;  Consider removing or making this a max-width if grid handles size */
+    height: 120px;
+    /* Keep the height for consistent vertical spacing */
+    margin-bottom: 10px;
+    /* Keep this if you want space between the bottom of the radial bar and its text */
+    justify-self: center;
+}
+
+.radial-bars svg {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-90deg);
+}
+
+.radial-bars .progress-bar {
+    fill: none;
+    stroke: #333;
+    /* CORRECTED: Grey background path for the circular bar */
+    stroke-width: 8;
+    transform: translate(5px, 5px);
+}
+
+.radial-bars .path {
+    fill: none;
+    stroke: #0ef;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 188.5;
+    /* Circumference for r=30 */
+}
+
+.radial-bars .path {
+    /* Keep existing properties like fill, stroke, stroke-width, stroke-linecap, transform, stroke-dasharray */
+    stroke-dashoffset: 188.5;
+    /* This will be the initial state */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+    /* Keep the transition for smooth animation */
+}
+
+/* Then for each path, add the animation-triggering class */
+.radial-bars .path-1.animate {
+    animation: animatePath1 1s ease-in-out forwards;
+}
+
+.radial-bars .path-2.animate {
+    animation: animatePath2 1s ease-in-out forwards;
+}
+
+.radial-bars .path-3.animate {
+    animation: animatePath3 1s ease-in-out forwards;
+}
+
+.radial-bars .path-4.animate {
+    animation: animatePath4 1s ease-in-out forwards;
+}
+
+.radial-bars .path-1 {
+    animation: animatePath1 1s ease-in-out forwards;
+}
+
+.radial-bars .path-2 {
+    animation: animatePath2 1s ease-in-out forwards;
+}
+
+.radial-bars .path-3 {
+    animation: animatePath3 1s ease-in-out forwards;
+}
+
+.radial-bars .path-4 {
+    animation: animatePath4 1s ease-in-out forwards;
+}
+
+
+/* --- CRUCIAL CHANGE: Make professional skills percentage cyan and visible inside the circle --- */
+.radial-bars .percentage {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    /* CORRECTED: Changed to cyan color */
+    z-index: 1;
+}
+
+.radial-bars .percentage.animate {
+    opacity: 1;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+.radial-bars .text {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    max-width: 100px;
+    line-height: 1.2;
+}
+
+.radial-bars .text.animate {
+    opacity: 1;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation keyframes for radial bar paths based on r=30 (Circumference = 188.5) */
+/* Offset = Circumference * (1 - (percentage / 100)) */
+
+@keyframes animatePath1 {
+
+    /* Creativity: 90% -> 188.5 * (1 - 0.90) = 18.85 */
+    100% {
+        stroke-dashoffset: 18.85;
+    }
+}
+
+@keyframes animatePath2 {
+
+    /* Time Management: 80% -> 188.5 * (1 - 0.80) = 37.7 */
+    100% {
+        stroke-dashoffset: 37.7;
+    }
+}
+
+@keyframes animatePath3 {
+
+    /* Analytical Skills: 75% -> 188.5 * (1 - 0.75) = 47.125 */
+    100% {
+        stroke-dashoffset: 47.125;
+    }
+}
+
+@keyframes animatePath4 {
+
+    /* Problem Solving: 85% -> 188.5 * (1 - 0.85) = 28.275 */
+    100% {
+        stroke-dashoffset: 28.275;
+    }
+}
+
+.list-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.list-container p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 10px 15px;
+    padding-left: 40px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 239, 255, 0.4);
+    border-radius: 8px;
+    transition: all 0.4s ease-in-out;
+    display: block;
+
+    background-image: linear-gradient(to right, #e0e0e0, #0ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #e0e0e0;
+}
+
+.list-container p:hover {
+    background-color: rgba(0, 239, 255, 0.15);
+    border-color: #00bfff;
+    box-shadow: 0 6px 15px rgba(0, 239, 255, 0.3);
+    cursor: pointer;
+    transform: translateY(-4px) scale(1.01);
+
+    background-image: linear-gradient(to right, #0ef, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list-container p::before {
+    content: '\2022';
+    color: #00bfff;
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: color 0.4s ease-in-out;
+    text-shadow: 0 0 8px #00bfff;
+}
+
+.list-container p:hover::before {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(224, 224, 224, 0.9);
+}
+
+@media (max-width: 1024px) {
+    section {
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .container1 {
+        width: 48%;
+        min-width: 350px;
+        padding: 40px 25px;
+        min-height: 550px;
+    }
+
+    .radial-bars {
+        width: 100px;
+        height: 120px;
+    }
+
+    .radial-bars svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .radial-bars .percentage {
+        font-size: 16px;
+    }
+
+    .radial-bars .text {
+        font-size: 11px;
+        max-width: 90px;
+    }
+
+    .list-container p {
+        font-size: 1em;
+        padding: 8px 12px;
+        padding-left: 35px;
+    }
+
+    .list-container p::before {
+        font-size: 1.8em;
+    }
+
+    .progress-line::after {
+        font-size: 11px;
+        transform: translateY(-50%) translateX(3px);
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .container1 {
+        width: 90%;
+        max-width: 500px;
+        min-width: unset;
+        margin-bottom: 0;
+        padding: 40px 30px;
+    }
+
+    .radial-bars {
+        width: 130px;
+        height: 150px;
+    }
+
+    .radial-bars svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .radial-bars .percentage {
+        font-size: 20px;
+    }
+
+    .radial-bars .text {
+        font-size: 13px;
+    }
+
+    .list-container p {
+        font-size: 1.05em;
+        padding: 10px 15px;
+        padding-left: 40px;
+    }
+
+    .list-container p::before {
+        font-size: 2em;
+    }
+
+    .progress-line::after {
+        font-size: 12px;
+        transform: translateY(-50%) translateX(5px);
+    }
+}
+
+@media (max-width: 500px) {
+    .container1 {
+        padding: 30px 15px;
+    }
+
+    .heading1 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    .Technical-bars .bar i,
+    .bar img {
+        font-size: 1.6em;
+        width: 1.6em;
+        height: 1.6em;
+    }
+
+    .info span:first-child {
+        font-size: 0.9em;
+    }
+
+    .progress-line {
+        height: 7px;
+    }
+
+    .progress-line::after {
+        font-size: 10px;
+        transform: translateY(-50%) translateX(2px);
+    }
+
+    .list-container p {
+        font-size: 0.9em;
+        padding: 7px 10px;
+        padding-left: 28px;
+    }
+
+    .list-container p::before {
+        font-size: 1.5em;
+        left: 7px;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+/* ================= PROJECT SECTION STYLES ================= */
+.portfolio-projects {
+    background-color: #001b29;
+    /* Ensure consistent background */
+    color: #ededed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.projects-main-heading {
+    text-align: center;
+    font-size: 50px;
+    /* Consistent with other section titles */
+    font-weight: 700;
+    color: #ededed;
+    margin-bottom: 10px;
+    /* Reduced margin before underline */
+    padding-bottom: 10px;
+    /* Space for underline */
+    position: relative;
+    opacity: 0;
+    animation: slideBottom 1s 0.3s ease forwards;
+}
+
+.projects-main-heading::after {
+    /* Underline for project title */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #00bfff;
+    border-radius: 2px;
+}
+
+.projects-main-heading span {
+    color: #00bfff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* Increased gap for better separation */
+    width: 100%;
+    max-width: 1100px;
+    /* Consistent max-width */
+    padding-top: 50px;
+    /* Space after title */
+}
+
+.project-card {
+    background-color: transparent;
+    border: 1px solid #00bfff;
+    /* Example: 1px solid, semi-transparent cyan */
+    border-radius: 30px;
+    /* Consistent radius */
+    padding: 25px;
+    /* Slightly reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+    /* Consistent animation name */
+    overflow: hidden;
+    /* Ensure content fits nicely */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 239, 255, 0.2), 0 0 15px rgba(0, 239, 255, 0.1);
+    border-color: #0ef;
+    box-shadow: 1px 1px 20px #00bfff,
+        1px 1px 40px #0053b8f7;
+}
+
+.project-icon-container {
+    font-size: 2.5rem;
+    /* Adjusted */
+    margin-bottom: 18px;
+    /* Adjusted */
+    width: 65px;
+    /* Adjusted */
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon-container {
+    transform: scale(1.1);
+    /* Icon scales on card hover */
+}
+
+/* Specific icon background colors */
+.project-icon-container.website-icon {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.project-icon-container.android-icon {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.project-icon-container.python-icon {
+    background: linear-gradient(135deg, #ffc107, #d39e00);
+}
+
+.project-icon-container.news-icon {
+    background: linear-gradient(135deg, #fd7e14, #c7640f);
+}
+
+
+.project-card h3 {
+    font-size: 1.6rem;
+    /* Adjusted */
+    color: #ededed;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.project-tech {
+    font-size: 0.85rem;
+    /* Adjusted */
+    color: #00bfff;
+    margin-bottom: 12px;
+    /* Adjusted */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    /* Makes tech stack stand out */
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #b0c4de;
+    /* Softer color for description */
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    /* Space before buttons */
+    max-height: 100px;
+    /* Limit description height */
+    overflow-y: auto;
+    /* Scroll for longer descriptions */
+}
+
+/* Custom scrollbar for description */
+.project-description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.project-description::-webkit-scrollbar-thumb {
+    background-color: #00bfff;
+    border-radius: 3px;
+}
+
+.project-description::-webkit-scrollbar-track {
+    background-color: rgba(5, 17, 41, 0.5);
+}
+
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    /* Adjusted gap */
+    width: 100%;
+    margin-top: auto;
+}
+
+.action-btn {
+    padding: 9px 18px;
+    /* Adjusted */
+    border-radius: 20px;
+    /* Softer radius */
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #001b29;
+    background-color: #00bfff;
+    border: 2px solid #00bfff;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    /* Adjusted */
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    /* More dynamic hover */
+    box-shadow: 0 0 12px #00bfff, 0 0 22px rgba(0, 239, 255, 0.7);
+    color: #051129;
+    /* Ensure text color remains dark */
+}
+
+.action-btn.github-btn {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.action-btn.github-btn:hover {
+    background-color: #222;
+    /* Darker GitHub button */
+    border-color: #444;
+    box-shadow: 0 0 12px #555, 0 0 22px rgba(85, 85, 85, 0.7);
+    color: #fff;
+}
+
+.action-btn.download-btn {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.action-btn.download-btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    box-shadow: 0 0 12px #28a745, 0 0 22px rgba(40, 167, 69, 0.7);
+    color: #fff;
+}
+
+.action-btn i {
+    font-size: 0.95rem;
+    /* Adjusted */
+}
+
+.full-width-btn {
+    flex-basis: 100%;
+    /* Makes it take full width if it's the only one or on its own row */
+}
+
+/* Placeholder Sections Styling */
+.placeholder-section {
+    min-height: 60vh;
+    /* Or adjust as needed */
+    padding: 120px 10% 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s ease forwards;
+    /* Simple fade-in */
+}
+
+.placeholder-section .sub-title {
+    margin-bottom: 20px;
+}
+
+.placeholder-section p {
+    font-size: 1.1rem;
+    color: #b0c4de;
+    max-width: 600px;
+}
+
+.contact-link {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Animation Keyframes (Consolidated) --- */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Softer slide up */
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Softer slide down */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Softer zoom */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* For skill bars, assuming JS will handle width. For radial, CSS animations: */
+/* Circumference for r=40 (radial bar path) is approx 251.2 */
+@keyframes animatePath1 {
+    100% {
+        stroke-dashoffset: calc(251.2 * (1 - 0.90));
+    }
+}
+
+/* 90% */
+@keyframes animatePath2 {
+    100% {
+        stroke-dashoffset: calc(251.2 * (1 - 0.80));
+    }
+}
+
+/* 80% */
+@keyframes animatePath3 {
+    100% {
+        stroke-dashoffset: calc(251.2 * (1 - 0.75));
+    }
+}
+
+/* 75% */
+@keyframes animatePath4 {
+    100% {
+        stroke-dashoffset: calc(251.2 * (1 - 0.85));
+    }
+}
+
+/* 85% */
+
+/* Your existing @keyframes for showText, animateProgressLine, fillProgress, manipActiveHover */
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animateProgressLine {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* If progress-line itself animates */
+@keyframes fillProgress {
+    100% {
+        width: 100%;
+    }
+}
+
+/* This is generic, JS sets actual width */
+@keyframes manipActiveHover {
+    100% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Universal section padding */
+    .home_content h1 {
+        font-size: 48px;
+    }
+
+    .home_content h3 {
+        font-size: 28px;
+    }
+
+    .home .about-img {
+        width: 260px;
+        height: 260px;
+        margin-right: 0;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about .about-img {
+        margin-bottom: 30px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .sub-title,
+    .skills,
+    .projects-main-heading,
+    .about-text h2 {
+        font-size: 42px;
+        margin-bottom: 45px;
+    }
+
+    .skills-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .container1 {
+        max-width: 90%;
+        min-width: unset;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        /* Add JS for a proper hamburger menu toggle */
+        /* Example: display: none; */
+    }
+
+    .navbar a {
+        font-size: 17px;
+        margin-left: 20px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        /* Image first, then text */
+        text-align: center;
+        height: auto;
+        padding-bottom: 50px;
+        padding-top: 100px;
+    }
+
+    .home_content p {
+        text-align: center;
+    }
+
+    .home .about-img {
+        margin: 0 auto 30px;
+    }
+
+    /* Centered image on home */
+    .home_sci {
+        justify-content: center;
+    }
+
+    .btn-box {
+        margin: 20px auto;
+    }
+
+    .education {
+        grid-template-columns: 1fr;
+    }
+
+    .sub-title,
+    .skills,
+    .projects-main-heading,
+    .about-text h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .container1 {
+        padding: 25px 20px;
+    }
+
+    .heading1 {
+        font-size: 1.5em;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-description {
+        max-height: 80px;
+    }
+
+    /* Adjust for smaller cards */
+
+    /* Adjustments from user's original media query block */
+    #educations {
+        /* Original selector: .educations */
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 5%;
+        gap: 2rem;
+    }
+
+    .Technical-bars,
+    .radial-bars-container,
+    .list-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    /* Further reduce for small screens */
+    .home_content h1 {
+        font-size: 36px;
+    }
+
+    .home_content h3 {
+        font-size: 24px;
+    }
+
+    .home_content p {
+        font-size: 15px;
+    }
+
+    .home .about-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sub-title,
+    .skills,
+    .projects-main-heading,
+    .about-text h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about-text p,
+    .education div p {
+        font-size: 14px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 18px;
+    }
+
+    .project-icon-container {
+        font-size: 2.2rem;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-tech {
+        font-size: 0.8rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        max-height: 70px;
+    }
+
+    .action-btn {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+        min-width: 100px;
+        gap: 5px;
+    }
+
+    .action-btn i {
+        font-size: 0.9em;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Stack buttons on small screens */
+
+    .Technical-bars .bar i,
+    .bar img {
+        font-size: 1.5em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .bar .info span {
+        font-size: 0.85em;
+    }
+
+    .progress-line {
+        height: 8px;
+        margin-right: 40px;
+    }
+
+    .progress-line::after {
+        font-size: 10px;
+        margin-left: 8px;
+    }
+
+    .radial-bars {
+        width: 90px;
+        height: 120px;
+    }
+
+    .radial-bars svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .radial-bars .progress-bar,
+    .radial-bars .path {
+        stroke-width: 7;
+    }
+
+    .radial-bars .percentage {
+        font-size: 14px;
+    }
+
+    .list-container p {
+        font-size: 0.85em;
+        padding: 8px 10px 8px 30px;
+    }
+
+    .list-container p::before {
+        font-size: 1.3em;
+        left: 10px;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    /* Adjust if needed to match your skills section title spacing */
+    color: #ededed;
+    position: relative;
+    opacity: 0;
+    /* Initial state for animation */
+    animation: slideBottom 1s 0.2s ease forwards;
+    /* Reuse your existing animation */
+}
+
+.section-title span {
+    color: #00bfff;
+    /* Your accent color */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #0ef;
+    /* Your accent color */
+    border-radius: 2px;
+}
+
+
+/* --- Experience Section Specific Styles --- */
+#experience {
+    padding: 70px 0;
+    /* Add padding top/bottom to the section */
+    background-color: #001b29;
+    /* Your portfolio's background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* Include padding in element's total width/height */
+}
+
+.experience-container {
+    width: 90%;
+    /* Max width for the container */
+    max-width: 800px;
+    /* Adjust as needed */
+    margin: 0 auto;
+    /* Center the container */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Gap between each experience item */
+}
+
+.experience-item {
+    background-color: transparent;
+    border: 1px solid transparent;
+    /* Example: 1px solid, semi-transparent cyan */
+    box-shadow: 1px 1px 20px #00bfff,
+        1px 1px 40px #0053b8f7;
+    border-radius: 30px;
+    /* Darker background for each item, similar to project cards */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 239, 255, 0.15);
+    /* Subtle cyan border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 239, 255, 0.25);
+    /* Cyan glow on hover */
+    box-shadow: 1px 1px 20px #00bfff,
+        1px 1px 40px #0053b8f7;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+    /* Space between logo and text */
+}
+
+.company-logo {
+    width: 50px;
+    /* Size of the logo */
+    height: 50px;
+    object-fit: contain;
+    /* Ensures logo fits without distortion */
+    border-radius: 5px;
+    /* Slightly rounded corners for logos */
+    flex-shrink: 0;
+    /* Prevent logo from shrinking */
+}
+
+.title-duration {
+    flex-grow: 1;
+    /* Allows this div to take up available space */
+}
+
+.experience-header h3 {
+    color: #ededed;
+    /* White color for job title */
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: baseline;
+    /* Align job title with job type */
+}
+
+.experience-header h3 .job-type {
+    font-size: 0.7em;
+    /* Smaller size for part-time/full-time */
+    color: #0ef;
+    /* Cyan color for job type */
+    margin-left: 10px;
+    font-weight: normal;
+    background-color: rgba(0, 239, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.experience-header p {
+    color: #b0b0b0;
+    /* Lighter grey for company, duration, location */
+    font-size: 0.95em;
+    margin-bottom: 3px;
+}
+
+.experience-header .company-name {
+    font-weight: 500;
+    color: #ededed;
+    /* Make company name slightly more prominent */
+}
+
+.edit-icon {
+    color: #0ef;
+    /* Cyan color for the edit icon */
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: auto;
+    /* Pushes the icon to the far right */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.edit-icon:hover {
+    opacity: 1;
+}
+
+.skills-used {
+    color: #ededed;
+    /* White color for skills text */
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    /* Separator line */
+}
+
+.skills-used span {
+    font-weight: bold;
+    color: #0ef;
+    /* Cyan for "Skills:" label */
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 40px;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+    .experience-header h3 {
+        font-size: 1.3em;
+    }
+
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .experience-container {
+        width: 95%;
+        gap: 20px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        /* Stack logo and text on small screens */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .company-logo {
+        margin-bottom: 10px;
+    }
+
+    .edit-icon {
+        position: absolute;
+        /* Position relative to .experience-item for flexibility */
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Certificates Section Styling */
+.certificates-section {
+    padding: 50px 5%;
+    /* Increased padding for the section */
+    flex-grow: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8em;
+    /* Larger section title */
+    color: #fff;
+    margin-bottom: 50px;
+    /* More space below title */
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-title span {
+    color: #00bfff;
+    /* Bright blue accent */
+}
+
+/* Container for the Grid of Certificates */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    /* Adjusted min-width for cards */
+    gap: 30px;
+    /* Space between cards */
+    justify-content: center;
+    max-width: 1400px;
+    /* Increased max width for the grid */
+    margin: 0 auto;
+}
+
+/* Individual Certificate Item (The main card) */
+.certificate-item {
+    background-color: transparent;
+    /* Card background color */
+    border-radius: 20px;
+    /* More rounded corners */
+    border: 10px solid #00bfff;
+    /* Example: 1px solid, semi-transparent cyan */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    /* Consistent height for cards, adjust as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    /* Subtle blue border */
+}
+
+.certificate-item:hover {
+    transform: translateY(-8px);
+    /* More pronounced lift effect */
+    box-shadow: 1px 1px 20px #00bfff,
+        1px 1px 40px #0053b8f7;
+}
+
+/* Certificate Info (Top part of the card) */
+.certificate-info {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    /* Increased padding */
+    border-bottom: 1px solid #333;
+    /* Darker separator */
+    margin-bottom: 15px;
+    flex-grow: 1;
+    /* Allows info section to expand */
+}
+
+.certificate-org-logo {
+    width: 60px;
+    /* Larger logo size */
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 18px;
+    background-color: #fff;
+    padding: 8px;
+    /* More padding for logos */
+    object-fit: contain;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-text {
+    flex-grow: 1;
+}
+
+.info-text h3 {
+    font-size: 1.25em;
+    /* Larger title font */
+    margin: 0 0 8px 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Edit icon removed from HTML as not in screenshot, keeping style just in case */
+.edit-icon {
+    font-size: 0.9em;
+    color: #888;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+.edit-icon:hover {
+    color: #fff;
+}
+
+.info-text p {
+    font-size: 0.95em;
+    /* Slightly larger paragraph font */
+    margin: 4px 0;
+    color: #c0c0c0;
+    /* Consistent light grey */
+    line-height: 1.4;
+}
+
+.info-text .skills-cert {
+    font-size: 0.88em;
+    /* Slightly larger skill font */
+    color: #a0a0a0;
+    margin-top: 12px;
+    /* More space above skills */
+}
+
+.info-text .skills-cert span {
+    font-weight: 600;
+    /* Bolder skills text */
+    color: #d0d0d0;
+}
+
+.info-text .credential-id {
+    font-size: 0.8em;
+    /* Smaller credential ID */
+    color: #808080;
+    /* Darker grey for ID */
+}
+
+.info-text .status-note {
+    color: #ffc107;
+    /* Yellow for "not issued yet" */
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+/* Certificate Actions Container (Holds the button and the folded paper icon) */
+.certificate-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align to the right as in screenshot */
+    padding: 0 25px 25px;
+    /* Padding for the section */
+    margin-top: auto;
+    /* Push this section to the bottom of the card */
+}
+
+/* Credential Button in Actions */
+.certificate-actions .credential-button {
+    background-color: #00bfff;
+    /* Bright blue button */
+    color: #0b0b0e;
+    /* Dark text for contrast */
+    padding: 12px 22px;
+    /* Larger padding for button */
+    border-radius: 30px;
+    /* More rounded pill shape */
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-right: 15px;
+    /* Space between button and folded paper icon */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.certificate-actions .credential-button:hover {
+    background-color: #0099cc;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+.certificate-actions .credential-button i {
+    font-size: 1.2em;
+    /* Larger icon in button */
+}
+
+/* Folded Paper Preview (The clickable icon to open overlay) */
+.certificate-actions .certificate-preview.folded-paper {
+    background-color: #2e2e2e;
+    /* Background for the icon */
+    width: 55px;
+    /* Icon size */
+    height: 55px;
+    border-radius: 12px;
+    /* Rounded corners for the icon */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Very subtle light border */
+}
+
+.certificate-actions .certificate-preview.folded-paper:hover {
+    background-color: #3a3a3a;
+    /* Darken on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+    /* Blue glow on icon hover */
+}
+
+.certificate-actions .certificate-preview.folded-paper i {
+    font-size: 2.5em;
+    /* Larger icon */
+    color: #00bfff;
+    /* Bright blue icon color */
+    transition: color 0.2s ease;
+}
+
+.certificate-actions .certificate-preview.folded-paper:hover i {
+    color: #fff;
+    /* White icon on hover */
+}
+
+/* Fold effect for the icon */
+.certificate-actions .certificate-preview.folded-paper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 18px 18px;
+    /* Smaller fold size */
+    border-color: transparent transparent #555 transparent;
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-actions .certificate-preview.folded-paper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 18px 18px;
+    border-color: transparent transparent #666 transparent;
+    transform: translate(0.5px, 0.5px);
+}
+
+/* Certificate Image Overlay (The popup modal) */
+.certificate-image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    /* More opaque background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.certificate-image-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.certificate-image-overlay img {
+    max-width: 90%;
+    max-height: 70%;
+    /* Slightly more height */
+    object-fit: contain;
+    border: 4px solid #00bfff;
+    /* Blue border for overlay image */
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 191, 255, 0.4), 0 0 25px rgba(0, 191, 255, 0.3);
+    /* Stronger blue glow */
+}
+
+.certificate-image-overlay .certificate-description,
+.certificate-image-overlay .no-certificate-note {
+    color: #fff;
+    font-size: 1.0em;
+    margin-top: 22px;
+    text-align: center;
+    max-width: 80%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.close-overlay {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 3.5em;
+    /* Larger close button */
+    cursor: pointer;
+    z-index: 10001;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-overlay:hover {
+    color: #00bfff;
+    /* Blue on hover */
+    transform: rotate(90deg);
+    /* Spin on hover */
+}
+
+/* Animate on scroll (visible state) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Starts lower */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    /* Slower animation */
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 3%;
+    }
+
+    .header .navbar {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* --- CONTACT SECTION STYLES --- */
+.contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 10% 40px;
+    background: var(--bg-color);
+}
+
+.contact .heading {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.contact .heading span {
+    color: var(--main-color);
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.contact-info,
+.contact-form {
+    background: #001b29;
+    padding: 2.5rem 3rem;
+    border-radius: 0.8rem;
+    border: 2px solid #00bfff;
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-info:hover,
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px #00bfff, 1px 0.5px #00abf0;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.contact-info .info-item i {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-right: 1rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.contact-info .info-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info .info-item a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.contact-form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.contact-form .input-box input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    /* Darker background for inputs */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .input-box input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.contact-form .input-box input:focus,
+.contact-form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
+}
+
+.contact-form .input-box input:first-child,
+.contact-form .input-box input:nth-child(2) {
+    flex: 1;
+    min-width: calc(50% - 0.5rem);
+}
+
+@media (max-width: 768px) {
+    .contact-form .input-box input {
+        min-width: 100%;
+    }
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+    margin-bottom: 2rem;
+}
+
+/* Original button style */
+.contact-form .btn-box {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    color: var(#00bfff);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.contact-form .btn-box:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 15px rgba(0, 171, 240, 0.6);
+}
+
+/* --- FOOTER STYLES --- */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .contact {
+        padding: 80px 5% 40px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact .heading {
+        font-size: 2.8rem;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info .info-item {
+        font-size: 1rem;
+    }
+
+    .contact-info .info-item i {
+        font-size: 1.6rem;
+    }
+
+    .contact-form .input-box {
+        gap: 0.8rem;
+    }
+
+    .contact-form .input-box input,
+    .contact-form textarea {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .contact-form textarea {
+        min-height: 120px;
+    }
+
+    .contact-form .btn-box {
+        width: 160px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+  /* Adjust percentage text inside radial bars */
+  .radial-bars .percentage {
+    top: 25% !important;
+    left: 60% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 14px; /* slightly smaller for mobile */
+    font-weight: 600;
+  }
+  .radial-bars .text{
+    font-size: x-small;
+  }
+}
+
+:root {
+    /* Base Colors - Original Dark Theme */
+    --bg-color: transparent;
+    /* Very dark blue/black */
+    --text-color: #ededed;
+    /* Off-white */
+    --main-color: #00abf0;
+    /* Vibrant blue/cyan for highlights */
+
+    /* Keeping other colors for consistency if they exist */
+    /* --sub-text-color: #b0b0b0; */
+    /* --accent-glow: rgba(0, 171, 240, 0.4); */
+}
+
+.floating-btns-fixed {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--main-color, #00abf0);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px var(--main-color, #00abf033);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+  position: relative;
+}
+.floating-btn:hover {
+  background: #fff;
+  color: var(--main-color, #00abf0);
+  border: 2px solid var(--main-color, #00abf0);
+  box-shadow: 0 4px 18px var(--main-color, #00abf033);
+}
+.floating-btn i {
+  color: inherit !important;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.fa-file-pdf-o {
+  color: inherit !important;
+}
+
+/* Resume dropdown positions above the resume button */
+.resume-dropdown {
+  display: none;
+  position: absolute;
+  bottom: 54px;
+  left: 0;
+  background: var(--second-bg-color, #e6ecf3);
+  border: 1.5px solid var(--main-color, #0077cc);
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  z-index: 10001;
+  min-width: 140px;
+  flex-direction: column;
+  padding: 0.3em 0;
+  animation: fadeIn 0.2s;
+}
+.resume-dropdown-btn {
+  background: none;
+  border: none;
+  color: var(--main-color, #0077cc);
+  font-size: 1rem;
+  padding: 0.7em 1.1em;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.resume-dropdown-btn:hover {
+  background: var(--main-color, #0077cc);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .floating-btns-fixed {
+    bottom: 14px;
+    right: 10px;
+    gap: 8px;
+  }
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  .resume-dropdown {
+    min-width: 100px;
+  }
+}
+
+
