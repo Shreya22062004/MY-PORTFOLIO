@@ -327,8 +327,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Download resume
     resumeDownload.addEventListener('click', function () {
         const link = document.createElement('a');
-        link.href = 'S J Shreya Resume Updated.pdf'; // Update path if needed
-        link.download = 'S J Shreya Resume Updated.pdf';
+        link.href = 'S_J_SHREYA_RESUME_NEW.pdf'; // Update path if needed
+        link.download = 'S_J_SHREYA_RESUME_NEW.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // Open resume in new tab
     resumeOpen.addEventListener('click', function () {
-        window.open('S J Shreya Resume Updated.pdf', '_blank');
+        window.open('S_J_SHREYA_RESUME_NEW.pdf', '_blank');
         resumeDropdown.style.display = 'none';
     });
 });
